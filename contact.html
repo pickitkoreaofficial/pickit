@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <title>Pickit | Contact / Quote</title>
+  <meta name="description" content="Contact Pickit for quotes via email. Metal cards and metal business cards." />
+  <meta property="og:title" content="Pickit | Contact / Quote" />
+  <meta property="og:description" content="Contact Pickit for quotes via email. Metal cards and metal business cards." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Pickit home">
+      <span class="logo" aria-hidden="true">P</span>
+      <span class="name">Pickit</span>
+      <span class="tag">Metal Cards · Metal Business Cards</span>
+    </a>
+    <nav class="menu" aria-label="Primary navigation">
+      <a class="" href="index.html"><span class="kren"><span class="kr">홈</span><span class="en">Home</span></span></a>
+      <a class="" href="products.html"><span class="kren"><span class="kr">제품</span><span class="en">Products</span></span></a>
+      <a class="" href="how-it-works.html"><span class="kren"><span class="kr">주문 방법</span><span class="en">How it works</span></span></a>
+      <a class="" href="gallery.html"><span class="kren"><span class="kr">갤러리</span><span class="en">Gallery</span></span></a>
+      <a class="active" href="contact.html"><span class="kren"><span class="kr">문의/견적</span><span class="en">Contact / Quote</span></span></a>
+      <a class="cta" href="contact.html"><span class="kren"><span class="kr">견적 받기</span><span class="en">Get a Quote</span></span></a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hcard">
+        <h1><span class="kren"><span class="kr">문의 / 견적</span><span class="en">Contact / Quote</span></span></h1>
+        <p><span class="kren"><span class="kr">견적은 이메일로 회신합니다. 급한 일정은 전화로 먼저 공유해 주세요.</span><span class="en">Quotes are replied via email. For urgent timelines, call first.</span></span></p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:pickit.korea.official@gmail.com"><span class="kren"><span class="kr">이메일 보내기</span><span class="en">Email us</span></span></a>
+          <a class="btn" href="tel:+82-10-8282-1043"><span class="kren"><span class="kr">전화하기</span><span class="en">Call</span></span></a>
+        </div>
+        <div class="note" style="margin-top:14px;"><div class="kren"><div class="kr"><strong>가장 빠른 견적</strong>: 제품(카드/명함), 수량, 마감, 납기, 문구/로고 파일을 함께 보내주세요.</div><div class="en"><strong>Fastest quote</strong>: send product type, quantity, finish, deadline, and text/logo files together.</div></div></div>
+      </div>
+
+      <div class="side">
+        <div class="panel">
+          <h3><span class="kren"><span class="kr">연락처</span><span class="en">Contact details</span></span></h3>
+          <p class="small">
+            <div><strong>Email</strong>: <a href="mailto:pickit.korea.official@gmail.com">pickit.korea.official@gmail.com</a></div>
+            <div><strong>Tel</strong>: <a href="tel:+82-10-8282-1043">010-8282-1043</a></div>
+          </p>
+        </div>
+        <div class="panel">
+          <h3><span class="kren"><span class="kr">파일 형식</span><span class="en">File formats</span></span></h3>
+          <p><span class="kren"><span class="kr">AI / SVG / PDF 권장. PNG는 가급적 2000px 이상.</span><span class="en">AI/SVG/PDF recommended. PNG ideally 2000px+ wide.</span></span></p>
+          <div class="pills"><span class="pill">AI</span><span class="pill">SVG</span><span class="pill">PDF</span><span class="pill">PNG</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2><span class="kren"><span class="kr">견적 요청 폼</span><span class="en">Quote request form</span></span></h2>
+      <p class="sub"><span class="kren"><span class="kr">아래 폼은 입력 후 이메일 초안을 자동 생성합니다(파일 첨부는 이메일에서).</span><span class="en">This form generates an email draft (attach files in your email client).</span></span></p>
+
+      <div class="grid">
+        <div class="card white" style="grid-column: span 8;">
+          <form class="form" id="quoteForm">
+            <div class="grid">
+              <div class="field" style="grid-column: span 6;">
+                <label for="name">이름/회사 · Name/Company</label>
+                <input id="name" name="name" placeholder="예: 홍길동 / Pickit Co." />
+              </div>
+              <div class="field" style="grid-column: span 6;">
+                <label for="email">이메일(필수) · Email (required)</label>
+                <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              </div>
+              <div class="field" style="grid-column: span 6;">
+                <label for="phone">연락처 · Phone</label>
+                <input id="phone" name="phone" placeholder="010-0000-0000" />
+              </div>
+              <div class="field" style="grid-column: span 6;">
+                <label for="product">제품 · Product</label>
+                <select id="product" name="product">
+                  <option value="Metal Card">Metal Card (메탈카드)</option>
+                  <option value="Metal Business Card">Metal Business Card (메탈 명함)</option>
+                  <option value="Other / Not sure">Other / Not sure (미정)</option>
+                </select>
+              </div>
+              <div class="field" style="grid-column: span 4;">
+                <label for="quantity">수량 · Quantity</label>
+                <input id="quantity" name="quantity" placeholder="예: 10 / 50 / 100" />
+              </div>
+              <div class="field" style="grid-column: span 4;">
+                <label for="finish">마감 · Finish</label>
+                <input id="finish" name="finish" placeholder="예: 브러시드 / 블랙 / 골드" />
+              </div>
+              <div class="field" style="grid-column: span 4;">
+                <label for="deadline">희망 납기 · Deadline</label>
+                <input id="deadline" name="deadline" placeholder="예: 2/15까지" />
+              </div>
+
+              <div class="field" style="grid-column: span 12;">
+                <label for="message">요청사항 · Notes</label>
+                <textarea id="message" name="message" placeholder="문구/로고, 배치, 참고 링크, 기타 요청사항을 적어주세요."></textarea>
+                <div class="help">Files: AI / SVG / PDF / PNG — send via email after the draft opens.</div>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="btn primary" type="submit"><span class="kren"><span class="kr">이메일 초안 생성</span><span class="en">Generate email draft</span></span></button>
+              <a class="btn" href="mailto:pickit.korea.official@gmail.com?subject=%5BPickit%20Quote%5D%20Request"><span class="kren"><span class="kr">그냥 이메일로 문의</span><span class="en">Email directly</span></span></a>
+            </div>
+          </form>
+        </div>
+
+        <div class="card" style="grid-column: span 4;">
+          <h3><span class="kren"><span class="kr">표준상품으로 시작?</span><span class="en">Starting with essentials?</span></span></h3>
+          <p><span class="kren"><span class="kr">급한 주문은 표준상품 스펙으로 진행하면 빠릅니다. 필요 시 시안을 간단히 확인합니다.</span><span class="en">Essentials are faster for urgent orders. We can do a quick proof if needed.</span></span></p>
+          <div class="actions" style="margin-top:12px;">
+            <a class="btn primary" href="products.html#essentials"><span class="kren"><span class="kr">표준상품 보기</span><span class="en">View Essentials</span></span></a>
+            <a class="btn" href="how-it-works.html"><span class="kren"><span class="kr">프로세스</span><span class="en">Process</span></span></a>
+          </div>
+          <div class="note" style="margin-top:14px;"><div class="kren"><div class="kr">전화를 먼저 주시면 납기 가능 여부를 빠르게 판단해 드립니다.</div><div class="en">Call us first to quickly confirm feasibility for tight deadlines.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div style="font-weight:900; color: var(--text); margin-bottom: 6px;">Pickit</div>
+        <div class="small">
+          <div><strong>Email</strong>: <a href="mailto:pickit.korea.official@gmail.com">pickit.korea.official@gmail.com</a></div>
+          <div><strong>Tel</strong>: <a href="tel:+82-10-8282-1043">010-8282-1043</a></div>
+        </div>
+        <div style="margin-top:10px;" class="small">
+          Custom metal cards and metal business cards. Quotes via email.
+        </div>
+      </div>
+      <div class="small" style="text-align:right;">
+        <div><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></div>
+        <div style="margin-top:8px;">© <span data-year></span> Pickit. All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
