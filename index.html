@@ -1,86 +1,62 @@
-/* ===== HOME (text-only, enterprise clean) ===== */
-body.is-home{
-  background:#ffffff !important;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>Pickit | Premium Metal Card</title>
+  <meta name="description" content="Pickit — Premium Metal Card." />
+</head>
 
-.home-hero{
-  height: calc(100vh - 74px);
-  min-height: 560px;
-  display: grid;
-  place-items: center;
-  background: #ffffff;
-}
+<body class="is-home">
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="Pickit home">
+        <span class="logo" aria-hidden="true">P</span>
+        <span class="name">Pickit</span>
+        <span class="tag">Metal Cards · Metal Business Cards</span>
+      </a>
 
-.home-center{
-  width: min(920px, 92vw);
-  text-align: center;
-  padding: 22px 12px;
-}
+      <nav class="menu" aria-label="Primary navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a class="cta" href="contact.html">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
 
-.home-kicker{
-  font-weight: 800;
-  color: var(--muted);
-  letter-spacing: .02em;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
+  <main>
+    <section class="home-hero" aria-label="Pickit home">
+      <div class="home-center">
+        <div class="home-kicker">The most distinctive way to introduce yourself.</div>
+        <div class="home-sub">PREMIUM METAL CARD</div>
+        <h1 class="home-title">PICKIT.</h1>
 
-.home-sub{
-  font-weight: 900;
-  letter-spacing: .18em;
-  font-size: 12px;
-  color: var(--text);
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(201,162,74,.35);
-  background: linear-gradient(180deg, #ffffff, #fbfaf6);
-  box-shadow: 0 10px 24px rgba(11,11,15,.06);
-  margin-bottom: 16px;
-}
+        <div class="home-actions">
+          <a class="btn primary" href="contact.html">Get a Quote</a>
+          <a class="btn" href="products.html">View Products</a>
+        </div>
 
-.home-title{
-  margin: 0;
-  font-size: clamp(44px, 6vw, 92px);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  font-weight: 950;
-  color: var(--text);
-}
+        <div class="home-fine">
+          <span>Email: <a href="mailto:pickit.korea.official@gmail.com">pickit.korea.official@gmail.com</a></span>
+          <span>Tel: <a href="tel:+82-10-8282-1043">010-8282-1043</a></span>
+        </div>
+      </div>
+    </section>
+  </main>
 
-.home-title::after{
-  content:"";
-  display:block;
-  width: 120px;
-  height: 2px;
-  margin: 20px auto 0;
-  background: linear-gradient(90deg, transparent, rgba(201,162,74,.8), transparent);
-}
+  <footer class="footer footer-min">
+    <div class="wrap footer-row">
+      <div class="small">© <span data-year></span> Pickit</div>
+      <div class="small"><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></div>
+    </div>
+  </footer>
 
-.home-actions{
-  margin-top: 26px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.home-fine{
-  margin-top: 18px;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.home-fine a{
-  font-weight: 900;
-  text-decoration: none;
-}
-.home-fine a:hover{
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
+  <script src="script.js"></script>
+</body>
+</html>
