@@ -1,64 +1,86 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <title>Pickit | Metal Cards · Metal Business Cards</title>
-  <meta name="description" content="Pickit — premium metal cards and metal business cards. Quote-first with fast-order essentials." />
-</head>
+/* ===== HOME (text-only, enterprise clean) ===== */
+body.is-home{
+  background:#ffffff !important;
+}
 
-<body class="is-home">
-  <header class="topbar">
-    <div class="wrap nav">
-      <a class="brand" href="index.html" aria-label="Pickit home">
-        <span class="logo" aria-hidden="true">P</span>
-        <span class="name">Pickit</span>
-        <span class="tag">Metal Cards · Metal Business Cards</span>
-      </a>
+.home-hero{
+  height: calc(100vh - 74px);
+  min-height: 560px;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+}
 
-      <nav class="menu" aria-label="Primary navigation">
-        <a class="active" href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="how-it-works.html">How it works</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-        <a class="cta" href="contact.html">Get a Quote</a>
-      </nav>
-    </div>
-  </header>
+.home-center{
+  width: min(920px, 92vw);
+  text-align: center;
+  padding: 22px 12px;
+}
 
-  <main>
-    <section class="intro" aria-label="Pickit intro">
-      <div class="card-stage">
-        <div class="metal-card" id="heroCard" aria-label="Metal card">
-          <!-- Put your generated image here: assets/metal-card.png -->
-          <img src="assets/metal-card.png" alt="Pickit metal card"
-     onload="this.parentElement.classList.add('has-img')" />
-          <span class="corner tl" aria-hidden="true"></span>
-          <span class="corner tr" aria-hidden="true"></span>
-          <span class="corner bl" aria-hidden="true"></span>
-          <span class="corner br" aria-hidden="true"></span>
-        </div>
-      </div>
-    </section>
-  </main>
+.home-kicker{
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: .02em;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 
-  <footer class="footer footer-min">
-    <div class="wrap footer-row">
-      <div class="small">
-        <strong>Email</strong>:
-        <a href="mailto:pickit.korea.official@gmail.com">pickit.korea.official@gmail.com</a>
-        ·
-        <strong>Tel</strong>:
-        <a href="tel:+82-10-8282-1043">010-8282-1043</a>
-      </div>
-      <div class="small">© <span data-year></span> Pickit</div>
-    </div>
-  </footer>
+.home-sub{
+  font-weight: 900;
+  letter-spacing: .18em;
+  font-size: 12px;
+  color: var(--text);
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(201,162,74,.35);
+  background: linear-gradient(180deg, #ffffff, #fbfaf6);
+  box-shadow: 0 10px 24px rgba(11,11,15,.06);
+  margin-bottom: 16px;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.home-title{
+  margin: 0;
+  font-size: clamp(44px, 6vw, 92px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 950;
+  color: var(--text);
+}
+
+.home-title::after{
+  content:"";
+  display:block;
+  width: 120px;
+  height: 2px;
+  margin: 20px auto 0;
+  background: linear-gradient(90deg, transparent, rgba(201,162,74,.8), transparent);
+}
+
+.home-actions{
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.home-fine{
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.home-fine a{
+  font-weight: 900;
+  text-decoration: none;
+}
+.home-fine a:hover{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
