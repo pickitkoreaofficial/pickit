@@ -367,3 +367,128 @@ textarea{ min-height: 120px; resize: vertical; }
   .hcard h1{ font-size: 32px; }
   .ph{ grid-column: span 12; }
 }
+/* ===== Home Intro: blank white + interactive metal card ===== */
+
+.intro{
+  height: 100vh;
+  min-height: 640px;
+  display: grid;
+  place-items: center;
+  background: #ffffff; /* 완전 화이트 */
+}
+
+/* 홈에서는 첫 화면에 아무것도 없게: 스크롤 전까지 네비 숨김 */
+body.is-home:not(.nav-visible) .topbar{
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none;
+  border-bottom-color: transparent;
+  background: transparent;
+  backdrop-filter: none;
+  transition: opacity .28s ease, transform .28s ease;
+}
+body.is-home.nav-visible .topbar{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity .28s ease, transform .28s ease;
+}
+
+.card-stage{
+  width: min(720px, 92vw);
+  height: min(420px, 52vh);
+  display: grid;
+  place-items: center;
+  perspective: 1200px;
+}
+
+.metal-card{
+  /* 마우스 값(0~1) */
+  --mx: .5;
+  --my: .5;
+
+  width: min(560px, 86vw);
+  aspect-ratio: 86 / 54;
+  border-radius: 22px;
+  position: relative;
+  transform-style: preserve-3d;
+
+  /* 기본(이미지 없을 때) 메탈 텍스처 목업 */
+  background:
+    linear-gradient(135deg,
+      #ffffff 0%,
+      #f1f2f6 18%,
+      #ffffff 36%,
+      #e9ecf3 52%,
+      #ffffff 70%,
+      #f4f5f8 100%);
+  border: 1px solid rgba(15,15,18,.10);
+  box-shadow:
+    0 24px 60px rgba(0,0,0,.12),
+    0 2px 0 rgba(255,255,255,.8) inset;
+
+  /* JS에서 rotate/translate 적용 */
+  will-change: transform;
+}
+
+/* 카드 이미지가 있으면 위에 덮어서 보여줌 */
+.metal-card img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* 사진이면 cover */
+  border-radius: 22px;
+  transform: translateZ(22px);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* 메탈 하이라이트(마우스 따라 이동) */
+.metal-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: 24px;
+  background:
+    radial-gradient(380px 220px at calc(var(--mx) * 100%) calc(var(--my) * 100%),
+      rgba(201,162,74,.22), transparent 60%),
+    radial-gradient(420px 260px at calc((1 - var(--mx)) * 100%) calc((1 - var(--my)) * 100%),
+      rgba(255,255,255,.45), transparent 58%);
+  mix-blend-mode: screen;
+  transform: translateZ(18px);
+  pointer-events:none;
+}
+
+/* 카드 바닥 그림자도 미세하게 반응 */
+.metal-card::after{
+  content:"";
+  position:absolute;
+  inset: 10% 6%;
+  background: rgba(0,0,0,.22);
+  filter: blur(28px);
+  border-radius: 26px;
+  transform: translateZ(-20px);
+  opacity: .45;
+}
+
+/* 모서리 글린트(“모서리가 마우스 따라 움직임” 느낌) */
+.corner{
+  position:absolute;
+  width: 26px; height: 26px;
+  border-radius: 10px;
+  border: 1px solid rgba(201,162,74,.35);
+  background:
+    radial-gradient(circle at 30% 30%,
+      rgba(201,162,74,.35),
+      rgba(201,162,74,.02) 70%);
+  box-shadow: 0 10px 20px rgba(0,0,0,.10);
+  transform: translateZ(28px);
+  pointer-events:none;
+  opacity: .9;
+}
+
+.corner.tl{ top: 10px; left: 10px; transform: translateZ(28px) translate(calc((.5 - var(--mx)) * 14px), calc((.5 - var(--my)) * 14px)); }
+.corner.tr{ top: 10px; right:10px; transform: translateZ(28px) translate(calc((var(--mx) - .5) * 14px), calc((.5 - var(--my)) * 14px)); }
+.corner.bl{ bottom:10px; left: 10px; transform: translateZ(28px) translate(calc((.5 - var(--mx)) * 14px), calc((var(--my) - .5) * 14px)); }
+.corner.br{ bottom:10px; right:10px; transform: translateZ(28px) translate(calc((var(--mx) - .5) * 14px), calc((var(--my) - .5) * 14px)); }
